@@ -1,0 +1,43 @@
+<div class="col-6" style="margin-left: 10%;">
+    <form [formGroup]="conForm" (ngSubmit)="addValues(conForm)">
+        <div class="mb-3">
+            <label for="Name" class="form-label">Enter New ContactName</label>
+            <input type="text" formControlName="name" id="name" class="form-control" placeholder="pramod kumar pradhan">
+        </div>
+        <div class="mb-3">
+            <label for="Address" class="form-label">Enter New Address</label>
+            <input type="text" formControlName="address" id="address" class="form-control" placeholder="burla">
+        </div>
+        <div class="mb-3">
+            <label for="PhoneNumber" class="form-label">Enter New PhoneNumber</label>
+            <input type="text" formControlName="ph" id="ph" class="form-control" placeholder="7873221242">
+        </div>
+        <div class="mb-3">
+            <label for="Email" class="form-label">Enter New Email</label>
+            <input type="text" formControlName="email" id="email" class="form-control" placeholder="Pramodpradhan308@gmail.com">
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="SignIn" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+
+<table class="table" style="margin: 0% 15%;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of cons">
+            <td>{{r.name}}</td>
+            <td>{{r.address}}</td>
+            <td>{{r.ph}}</td>
+            <td>{{r.email}}</td>
+        </tr>
+    </tbody>
+</table>

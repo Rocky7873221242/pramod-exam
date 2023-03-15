@@ -1,0 +1,41 @@
+<!-- ngIf[START] -->
+
+<!-- 1st Way -->
+<h2 *ngIf="value; else elseBlock">
+    MyWebsite
+</h2>
+
+<ng-template #elseBlock>
+    <h2>
+        Name is Hidden
+    </h2>
+</ng-template>
+
+<!-- 2nd Way -->
+<div *ngIf="value; then ifBlock; else elseeBlock"></div>
+
+<ng-template #ifBlock>
+    <h2>If block executed</h2>
+</ng-template>
+
+<ng-template #elseeBlock>
+    <h2>Else Block executed</h2>
+</ng-template>
+
+<!-- [END] -->
+
+
+<!-- ngSwitch[START] -->
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You Picked RED</div>
+    <div *ngSwitchCase="'blue'">You Picked BLUE</div>
+    <div *ngSwitchCase="'green'">You Picked GREEN</div>
+    <div *ngSwitchDefault>Inavlid Color..Pick Again !!!</div>
+</div>
+<!-- [END] -->
+
+<!-- ngFor[START] -->
+<div *ngFor="let color of colors; ">
+    <h3>{{color}}</h3>
+</div>
+<!-- [END] -->
